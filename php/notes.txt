@@ -1,0 +1,23 @@
+1. To run a command in background, the output must be redirected to /dev/null. This is written in exec() manual page. 
+   There are cases where you need the output to be logged somewhere else though. 
+Redirecting the output to a file like this didn't work for me:
+
+<?php
+# this doesn't work!
+shell_exec("my_script.sh 2>&1 >> /tmp/mylog &");
+?>
+
+Using the above command still hangs web browser request.
+
+Seems like you have to add exactly "/dev/null" to the command line. For instance, this worked:
+
+<?php
+# works, but output is lost
+shell_exec("my_script.sh 2>/dev/null >/dev/null &");
+?>
+
+But I wanted the output, so I used this:
+
+<?php
+shell_exec("my_script.sh 2>&1 | tee -a /tmp/mylog 2>/dev/null >/dev/null &");
+?>
