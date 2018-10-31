@@ -1,1 +1,9 @@
+
+http://www.hackingarticles.in/apache-log-poisoning-through-lfi/
+
 http://hackingandsecurity.blogspot.com/2016/06/web-application-exploitation-cheatsheet.html
+https://www.sunnyhoi.com/how-to-hack-a-website-using-local-file-inclusion-lfi/
+https://highon.coffee/blog/lfi-cheat-sheet/
+https://outpost24.com/blog/from-local-file-inclusion-to-remote-code-execution-part-1
+
+https://www.idontplaydarts.com/2011/02/using-php-filter-for-local-file-inclusion/
